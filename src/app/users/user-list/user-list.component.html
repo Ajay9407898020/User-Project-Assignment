@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-content>
+        <h2>User List</h2>
+        <mat-list class="user-list">
+            <mat-list-item *ngFor="let user of users">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                    <circle cx="25" cy="25" r="20" fill="#ccc" />
+                  </svg>
+                <div class="user-details">
+                    <h3 mat-line>{{ user.name }}</h3>
+                    <p mat-line>Email: {{ user.email }}</p>
+                    <p mat-line>Role: {{ user.role }}</p>
+                </div>
+                <button mat-icon-button color="primary" (click)="editUser(user.id)">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                <button mat-icon-button color="warn" (click)="deleteUser(user.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>
