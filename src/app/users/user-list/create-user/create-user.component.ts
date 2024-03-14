@@ -26,7 +26,6 @@ export class CreateUserComponent implements OnInit {
       } else {
         this.userMode = 'Add'
       }
-      console.log(this.user);
     })
     this._initForm();
   }
